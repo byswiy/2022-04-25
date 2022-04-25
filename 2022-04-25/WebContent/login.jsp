@@ -7,7 +7,7 @@
 <title>로그인</title>
 </head>
 <body>
-	<form action="/2022-04-25/member/controller" method="post">
+	<form action="/2022-04-25/member/login" method="post">
 		<div>
 			<label>아이디 : <input type="text" name="id" placeholder="아이디"> </label>
 		</div>

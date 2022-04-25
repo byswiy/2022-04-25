@@ -8,6 +8,21 @@ import dto.MemberDTO;
 // POJO (Plain Old Java Object)
 // 순수 자바 코드로만 이루어진 소스 파일
 public class MemberService {
+	public boolean login(MemberDTO memberDto) {
+		// 로그인 처리
+		MemberDAO dao = new MemberDAO();
+		
+		MemberDTO selectedMemberDTO = dao.selectMemberInfo(memberDto);
+		
+		if(selectedMemberDTO == null) {
+			// 로그인 실패 처리
+			return false;
+		} else {
+			// 로그인 성공 처리
+			return true;
+		}
+	}
+	
 	public int join(MemberDTO newMemberInfo) {
 		// 회원 가입 처리
 		MemberDAO dao = new MemberDAO();
