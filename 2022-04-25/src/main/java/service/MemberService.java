@@ -5,6 +5,8 @@ import javax.servlet.http.HttpServletResponse;
 import dao.MemberDAO;
 import dto.MemberDTO;
 
+// POJO (Plain Old Java Object)
+// 순수 자바 코드로만 이루어진 소스 파일
 public class MemberService {
 	public int join(MemberDTO newMemberInfo) {
 		// 회원 가입 처리
