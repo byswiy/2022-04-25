@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class Database {
 	// DB 커넥션을 생성해서 반환하는 메서드
-	public Connection getConnection() {
+	public static Connection getConnection() {
 		Connection conn = null;
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
@@ -32,7 +32,7 @@ public class Database {
 //		}
 //	}
 	
-	public void closePstmt(PreparedStatement pstmt) {
+	public static void closePstmt(PreparedStatement pstmt) {
 		if(pstmt != null) {
 			try {
 				pstmt.close();
@@ -42,7 +42,7 @@ public class Database {
 		}
 	}
 	
-	public void closeConn(Connection conn) {
+	public static void closeConn(Connection conn) {
 		if(conn != null) {
 			try {
 				conn.close();
@@ -51,7 +51,7 @@ public class Database {
 			}
 		}
 	}
-	public void closeResultSet(ResultSet rs) {
+	public static void closeResultSet(ResultSet rs) {
 		if(rs != null) {
 			try {
 				rs.close();
