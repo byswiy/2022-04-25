@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="" method="post">
+	<form action="/2022-04-25/member/controller" method="post">
 		<h3>회원 가입</h3>
 		<div>
 			<label>아이디 :</label><input type="text" name="id" placeholder="아이디"> 
