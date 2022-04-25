@@ -4,6 +4,8 @@ import dao.MemberDAO;
 import dto.MemberDTO;
 
 public class MemberService {
+	public static final int JOIN_SUCCESS = 201;
+	public static final int JOIN_FAIL = 409;
 	
 	public int join(MemberDTO newMemberInfo) {
 		// 회원 가입 처리
