@@ -29,7 +29,7 @@ public class MemberController extends HttpServlet {
 		
 		int statusCode = service.join(newMemberInfo);
 		// 회원가입 처리 결과에 맞는 페이지 전달(응답)
-		if(statusCode == 201) {
+		if(statusCode == HttpServletResponse.SC_CREATED) {
 			// 회원가입 완료 페이지
 			response.sendRedirect("/2022-04-25/memberOutput.jsp");
 		} else {
