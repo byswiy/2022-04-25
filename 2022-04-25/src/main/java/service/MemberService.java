@@ -1,12 +1,11 @@
 package service;
 
+import javax.servlet.http.HttpServletResponse;
+
 import dao.MemberDAO;
 import dto.MemberDTO;
 
 public class MemberService {
-	public static final int JOIN_SUCCESS = 201;
-	public static final int JOIN_FAIL = 409;
-	
 	public int join(MemberDTO newMemberInfo) {
 		// 회원 가입 처리
 		MemberDAO dao = new MemberDAO();
@@ -21,9 +20,9 @@ public class MemberService {
 		// 결과를 boolean이 아닌 상태코드를 전달해줄 수 있다
 		
 		if(result) {
-			return 201;
+			return HttpServletResponse.SC_CREATED;
 		} else {
-			return 409;
+			return HttpServletResponse.SC_CONFLICT;
 		}
 //		return result;
 	}
