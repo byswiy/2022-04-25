@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import dto.MemberDTO;
 import service.MemberService;
 
+// 회원 정보와 관련된 요청을 처리하는 컨트롤러
+// 컨트롤러의 url에 꼭 controller라고 쓸 필요는 없음
+
 @WebServlet("/member/controller")
 public class MemberController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
