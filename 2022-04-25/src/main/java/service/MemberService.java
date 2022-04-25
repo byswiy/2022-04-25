@@ -19,7 +19,7 @@ public class MemberService {
 		// 결과를 boolean이 아닌 상태코드를 전달해줄 수 있다
 		
 		if(result) {
-			return 200;
+			return 201;
 		} else {
 			return 409;
 		}
