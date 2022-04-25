@@ -8,9 +8,7 @@ import dto.MemberDTO;
 
 public class MemberDAO {
 	public boolean insertMemberInfo(MemberDTO memberInfo) {
-		Database db = new Database();
-		
-		Connection conn = db.getConnection();
+		Connection conn = Database.getConnection();
 		PreparedStatement pstmt = null;
 		
 		String sql = "INSERT INTO usrinfo(id, pw, name) VALUES(?, ?, ?)";
@@ -30,8 +28,8 @@ public class MemberDAO {
 			
 			return false;
 		} finally {
-			db.closePstmt(pstmt);
-			db.closeConn(conn);
+			Database.closePstmt(pstmt);
+			Database.closeConn(conn);
 		}
 		
 		
