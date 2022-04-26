@@ -53,7 +53,7 @@ public class MemberDAO {
 		Connection conn = Database.getConnection();
 		PreparedStatement pstmt = null;
 		
-		String sql = "INSERT INTO usrinfo(id, pw, name) VALUES(?, ?, ?)";
+		String sql = "INSERT INTO userinfo(`id`, `pw`, `name`) VALUES(?, ?, ?)";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -65,7 +65,7 @@ public class MemberDAO {
 			int count = pstmt.executeUpdate();
 			
 			return count == 1;
-		} catch (SQLException e) {
+		} catch (SQLException | NullPointerException e) {
 			e.printStackTrace();
 			
 			return false;
